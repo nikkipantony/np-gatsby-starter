@@ -5,12 +5,12 @@
 
 import React from "react"
 import { Link } from "gatsby"
-import SEO from "../09_Utilities/SEO"
+import Seo from "../09_Utilities/SEO"
 import Layout from "../06_Templates/MainLayout/MainLayout"
 
 const MarkdownPage = () => (
     <Layout>
-        <SEO title="Markdown" />
+        <Seo title="Markdown" />
         <section className="default-page-layout__grid">
             <div className="default-page-layout__column">
                 <h1>Learn about using Markdown as a content source</h1>

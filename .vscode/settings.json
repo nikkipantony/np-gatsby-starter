@@ -1,8 +1,6 @@
 {
 	"window.zoomLevel": 1,
 
-	"terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
-
 	"workbench.colorTheme": "Visual Studio Dark",
 	"workbench.iconTheme": "material-icon-theme",
 

@@ -6,7 +6,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../MainLayout/MainLayout"
-import SEO from "../../09_Utilities/SEO"
+import Seo from "../../09_Utilities/SEO"
 
 export default function Template({
     data, // This prop will be injected by the GraphQL query below.
@@ -16,7 +16,7 @@ export default function Template({
 
     return (
         <Layout>
-            <SEO title={frontmatter.title} />
+            <Seo title={frontmatter.title} />
             <section className="page-template">
                 <div
                     className="page-template__column"
