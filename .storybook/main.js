@@ -38,9 +38,6 @@ module.exports = {
     },
 
     webpackFinal: async config => {
-        // Set the NODE_ENV to 'production' by default, to allow babel-plugin-remove-graphql-queries to remove static queries
-        process.env.NODE_ENV = "production"
-
         // Transpile Gatsby module because Gatsby includes un-transpiled ES6 code.
         config.module.rules[0].exclude = [/node_modules\/(?!(gatsby)\/)/]
 
@@ -57,8 +54,19 @@ module.exports = {
             // Use @babel/plugin-proposal-class-properties for class arrow functions
             require.resolve("@babel/plugin-proposal-class-properties"),
 
-            // Use babel-plugin-remove-graphql-queries to remove static queries from components when rendering in storybook
-            require.resolve("babel-plugin-remove-graphql-queries"),
+            // Use babel-plugin-remove-graphql-queries to remove graphql queries from components when rendering in storybook
+            // While still rendering content from useStaticQuery in development mode
+            // TODO Fix useStaticQuery content not rendering when built
+            [
+                require.resolve("babel-plugin-remove-graphql-queries"),
+                {
+                    stage:
+                        config.mode === `development`
+                            ? "develop-html"
+                            : "build-html",
+                    staticQueryDir: "page-data/sq/d",
+                },
+            ],
         ]
 
         return config
