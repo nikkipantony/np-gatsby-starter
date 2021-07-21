@@ -45,15 +45,20 @@
   },
   {
     "name": "$gradients",
-    "value": "( 140mgs: linear-gradient(140deg, #000013 0%, #ffd700 50%, #fcfcfc 100%), )",
+    "value": "( mgs140: linear-gradient(140deg, #000013 0%, #ffd700 70%, #fcfcfc 90%), gs35: linear-gradient(35deg, #ffd700 0%, #fcfcfc 80%), )",
     "mapValue": [
       {
-        "name": "mgs",
-        "value": "linear-gradient(140deg, #000013 0%, #ffd700 50%, #fcfcfc 100%)",
-        "compiledValue": "linear-gradient(140deg, #000013 0%, #ffd700 50%, #fcfcfc 100%)"
+        "name": "mgs140",
+        "value": "linear-gradient(140deg, #000013 0%, #ffd700 70%, #fcfcfc 90%)",
+        "compiledValue": "linear-gradient(140deg, #000013 0%, #ffd700 70%, #fcfcfc 90%)"
+      },
+      {
+        "name": "gs35",
+        "value": "linear-gradient(35deg, #ffd700 0%, #fcfcfc 80%)",
+        "compiledValue": "linear-gradient(35deg, #ffd700 0%, #fcfcfc 80%)"
       }
     ],
-    "compiledValue": "(140mgs: linear-gradient(140deg, #000013 0%, #ffd700 50%, #fcfcfc 100%))"
+    "compiledValue": "(mgs140: linear-gradient(140deg, #000013 0%, #ffd700 70%, #fcfcfc 90%), gs35: linear-gradient(35deg, #ffd700 0%, #fcfcfc 80%))"
   },
   {
     "name": "$opacities",

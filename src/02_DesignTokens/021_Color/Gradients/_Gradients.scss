@@ -5,7 +5,8 @@
 
 // Gradient Values
 $gradients: (
-    140mgs: linear-gradient(140deg, #000013 0%, #ffd700 50%, #fcfcfc 100%),
+    mgs140: linear-gradient(140deg, #000013 0%, #ffd700 70%, #fcfcfc 90%),
+    gs35: linear-gradient(35deg, #ffd700 0%, #fcfcfc 80%),
 );
 
 // Gradient Design Tokens Config

@@ -27,7 +27,16 @@ const Gradients = () => {
     return (
         <section>
             <h2 style={Title}>{TokenName}</h2>
-            <p>Description.</p>
+            {/* Edit gradients description to be specific to your design system ↓ */}
+            <p>
+                These are example color gradients. Gradients can be used within
+                user interfaces when being built with design systems to give
+                more creative freedom to designers. While flat colors brings
+                consistency it can also sometimes stifle a design's potential,
+                gradients can open the door to infinite possibilities. Through
+                blending brand colors, designers can create eye-catching and
+                more memorable visual designs and brand identities.
+            </p>
 
             <div
                 style={{

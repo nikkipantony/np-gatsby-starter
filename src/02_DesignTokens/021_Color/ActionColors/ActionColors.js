@@ -27,7 +27,7 @@ const ActionColors = () => {
     return (
         <section>
             <h2 style={Title}>{TokenName}</h2>
-            {/* Edit action color description for your design system ↓ */}
+            {/* Edit action color description to be specific to your design system ↓ */}
             <p>
                 These are example action colors. Action colors are semantic
                 colors used to communicate to a user with a specific purpose.
