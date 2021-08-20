@@ -22,12 +22,13 @@ const Typefaces = () => {
     const Title = {
         textTransform: "capitalize",
         marginTop: "80px",
+        marginBottom: "10px",
         lineHeight: "1",
     }
 
     return (
         <section>
-            <h2 style={Title}>{TokenName}</h2>
+            <h2 style={Title}>{TokenName.slice(0, -1)} Tokens</h2>
             <p className="css-1p8ieni">
                 A typeface is a set of characters of the same design. These
                 characters include letters, numbers, punctuation marks, and

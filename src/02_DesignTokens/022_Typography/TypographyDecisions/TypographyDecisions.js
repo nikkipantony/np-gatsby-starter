@@ -8,7 +8,7 @@ const TypographyDecisions = () => {
     }
 
     return (
-        <section
+        <div
             style={{
                 marginBottom: "40px",
             }}
@@ -16,6 +16,7 @@ const TypographyDecisions = () => {
             <h2
                 style={{
                     marginTop: "80px",
+                    marginBottom: "10px",
                 }}
             >
                 Typography Decisions
@@ -113,7 +114,7 @@ const TypographyDecisions = () => {
                     </table>
                 </div>
             </section>
-        </section>
+        </div>
     )
 }
 

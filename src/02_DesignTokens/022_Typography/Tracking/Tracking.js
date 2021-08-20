@@ -21,12 +21,13 @@ const Tracking = () => {
     const Title = {
         textTransform: "capitalize",
         marginTop: "80px",
+        marginBottom: "10px",
         lineHeight: "1",
     }
 
     return (
-        <section>
-            <h2 style={Title}>{TokenName}</h2>
+        <>
+            <h2 style={Title}>{TokenName} Tokens</h2>
             <p className="css-1p8ieni">Description.</p>
 
             <div
@@ -98,7 +99,7 @@ const Tracking = () => {
                     ))}
                 </tbody>
             </table>
-        </section>
+        </>
     )
 }
 

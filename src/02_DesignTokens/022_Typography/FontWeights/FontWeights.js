@@ -21,6 +21,7 @@ const FontWeights = () => {
     const Title = {
         textTransform: "capitalize",
         marginTop: "80px",
+        marginBottom: "10px",
         lineHeight: "1",
     }
 
@@ -29,8 +30,8 @@ const FontWeights = () => {
     }
 
     return (
-        <section>
-            <h2 style={Title}>{TokenName}</h2>
+        <>
+            <h2 style={Title}>{TokenName.slice(0, -1)} Tokens</h2>
             <p className="css-1p8ieni">
                 The `font-weight` CSS property sets the weight (or boldness) of
                 a font.
@@ -116,7 +117,7 @@ const FontWeights = () => {
                     ))}
                 </tbody>
             </table>
-        </section>
+        </>
     )
 }
 
