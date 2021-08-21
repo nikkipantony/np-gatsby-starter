@@ -134,8 +134,8 @@ figcaption {
 // The <small> element represents side-comments and small print, like copyright and legal text,
 // independent of its styled presentation.
 small {
-    font-size: font-size(cxs);
-    font-weight: font-weight(bold);
+    font-size: font-size(cs);
+    font-weight: font-weight(regular);
     color: brand-color(midnight);
 }
 

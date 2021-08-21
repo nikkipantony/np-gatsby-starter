@@ -199,7 +199,12 @@ const TypographyDecisions = () => {
                 }}
             >
                 <h3>Microcopy</h3>
-                <p className="css-1p8ieni">X</p>
+                <p className="css-1p8ieni">
+                    Microcopy should be used to represent side comments and
+                    small print, such as copyright and legal text. The `small`
+                    element should be used in favour instead of simply a smaller
+                    font size for it's semantic meaning.
+                </p>
 
                 <Canvas style={{ margin: "0" }}>
                     <div
@@ -208,7 +213,9 @@ const TypographyDecisions = () => {
                             flexDirection: "column",
                         }}
                     >
-                        <p>X</p>
+                        <p>
+                            <small>Microcopy text example.</small>
+                        </p>
                     </div>
                 </Canvas>
             </section>
