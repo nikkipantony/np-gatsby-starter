@@ -3,7 +3,7 @@
  *
  */
 
-// Import Fonts From Goolge Fonts
+// Import Fonts From Google Fonts
 @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Mono:wght@400;700&family=Rubik:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 // To host a font locally create a new folder within this `10_Styles` folder to save the font files within.
@@ -81,8 +81,7 @@ p {
     line-height: leading(regular);
     letter-spacing: tracking(normal);
     color: brand-color(midnight);
-    padding-bottom: spacing(l);
-    margin: spacing(l) 0 spacing(xl);
+    margin-bottom: spacing(s);
 }
 
 // Anchor Links
@@ -102,7 +101,6 @@ a:visited {
     letter-spacing: tracking(normal);
     color: brand-color(midnight);
     text-decoration: underline;
-    border-bottom: border(default);
 
     &:hover,
     &:active,
