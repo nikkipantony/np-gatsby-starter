@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { Canvas } from "@storybook/addon-docs"
 
 const Shadows = () => {
     const data = useStaticQuery(graphql`
@@ -14,63 +15,52 @@ const Shadows = () => {
         }
     `)
 
-    const VariableName = data.designTokensJson.name // Variable name
-    const Name = VariableName.substring(1) // Remove `$` from variable name
-    const TokenName = Name.replace(/-/g, " ") // Replace hyphens `-` with space ` `
-
-    const Title = {
-        textTransform: "capitalize",
-        marginTop: "80px",
-        lineHeight: "1",
-    }
-
     return (
-        <section>
-            <h3 style={Title}>{TokenName}</h3>
-            <p>Description.</p>
-
-            <div
+        <>
+            <Canvas
                 style={{
-                    display: "flex",
-                    flexWrap: "wrap",
-                    marginBottom: "-40px",
-                    width: "100%",
-                    marginLeft: "-30px",
-                    width: "calc(100% + 80px)",
+                    margin: "0",
                 }}
             >
-                {data.designTokensJson.mapValue.map(node => (
-                    <figure
-                        style={{
-                            margin: "0 50px 10px 30px",
-                            minWidth: "280px",
-                            maxWidth: "280px",
-                        }}
-                    >
-                        <div
+                <div
+                    style={{
+                        display: "flex",
+                        flexWrap: "wrap",
+                    }}
+                >
+                    {data.designTokensJson.mapValue.map(node => (
+                        <figure
                             style={{
-                                height: "120px",
-                                width: "100%",
-                                backgroundColor: "#fcfcfc",
-                                borderRadius: 0,
-                                border: "solid #000013 3px",
-                                boxShadow: `${node.compiledValue}`,
-                            }}
-                        ></div>
-                        <figcaption
-                            style={{
-                                color: "#000013",
-                                fontSize: "1.125rem",
-                                fontWeight: "700",
-                                textAlign: "left",
-                                padding: "2rem 0 2.5rem",
+                                margin: "0 50px 10px 30px",
+                                minWidth: "280px",
+                                maxWidth: "280px",
                             }}
                         >
-                            shadow({node.name})
-                        </figcaption>
-                    </figure>
-                ))}
-            </div>
+                            <div
+                                style={{
+                                    height: "120px",
+                                    width: "100%",
+                                    backgroundColor: "#fcfcfc",
+                                    borderRadius: 0,
+                                    border: "solid #000013 3px",
+                                    boxShadow: `${node.compiledValue}`,
+                                }}
+                            ></div>
+                            <figcaption
+                                style={{
+                                    color: "#000013",
+                                    fontSize: "1.125rem",
+                                    fontWeight: "700",
+                                    textAlign: "left",
+                                    padding: "0.4rem 0 2.5rem",
+                                }}
+                            >
+                                shadow({node.name})
+                            </figcaption>
+                        </figure>
+                    ))}
+                </div>
+            </Canvas>
 
             <table
                 className="docblock-argstable css-6hhrgj"
@@ -113,7 +103,7 @@ const Shadows = () => {
                     ))}
                 </tbody>
             </table>
-        </section>
+        </>
     )
 }
 

@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { Canvas } from "@storybook/addon-docs"
 
 const KeyFrameAnimations = () => {
     const data = useStaticQuery(graphql`
@@ -14,70 +15,59 @@ const KeyFrameAnimations = () => {
         }
     `)
 
-    const VariableName = data.designTokensJson.name // Variable name
-    const Name = VariableName.substring(1) // Remove `$` from variable name
-    const TokenName = Name.replace(/-/g, " ") // Replace hyphens `-` with space ` `
-
-    const Title = {
-        textTransform: "capitalize",
-        marginTop: "80px",
-        lineHeight: "1",
-    }
-
     return (
-        <section>
-            <h3 style={Title}>{TokenName}</h3>
-            <p>Description.</p>
-
-            <div
+        <>
+            <Canvas
                 style={{
-                    display: "flex",
-                    flexWrap: "wrap",
-                    marginBottom: "-40px",
-                    width: "100%",
-                    marginLeft: "-30px",
-                    width: "calc(100% + 80px)",
+                    margin: "0",
                 }}
             >
-                {data.designTokensJson.mapValue.map(node => (
-                    <figure
-                        style={{
-                            margin: "0 50px 10px 30px",
-                            minWidth: "280px",
-                            maxWidth: "280px",
-                        }}
-                    >
-                        <div
-                            onClick={() => window.location.reload()}
+                <div
+                    style={{
+                        display: "flex",
+                        flexWrap: "wrap",
+                    }}
+                >
+                    {data.designTokensJson.mapValue.map(node => (
+                        <figure
                             style={{
-                                display: "grid",
-                                justifyContent: "center",
-                                alignContent: "center",
-                                fontWeight: "700",
-                                height: "120px",
-                                width: "100%",
-                                borderRadius: "3px",
-                                border: "#000013 solid 3px",
-                                animation: `${node.compiledValue}`,
-                                cursor: "pointer",
+                                margin: "0 50px 10px 30px",
+                                minWidth: "280px",
+                                maxWidth: "280px",
                             }}
                         >
-                            Click To Reload
-                        </div>
-                        <figcaption
-                            style={{
-                                color: "#000013",
-                                fontSize: "1.125rem",
-                                fontWeight: "700",
-                                textAlign: "left",
-                                padding: "1rem 0 2.5rem",
-                            }}
-                        >
-                            animation({node.name})
-                        </figcaption>
-                    </figure>
-                ))}
-            </div>
+                            <div
+                                onClick={() => window.location.reload()}
+                                style={{
+                                    display: "grid",
+                                    justifyContent: "center",
+                                    alignContent: "center",
+                                    fontWeight: "700",
+                                    height: "120px",
+                                    width: "100%",
+                                    borderRadius: "3px",
+                                    border: "#000013 solid 3px",
+                                    animation: `${node.compiledValue}`,
+                                    cursor: "pointer",
+                                }}
+                            >
+                                Click To Reload
+                            </div>
+                            <figcaption
+                                style={{
+                                    color: "#000013",
+                                    fontSize: "1.125rem",
+                                    fontWeight: "700",
+                                    textAlign: "left",
+                                    padding: "0.4rem 0 2.5rem",
+                                }}
+                            >
+                                animation({node.name})
+                            </figcaption>
+                        </figure>
+                    ))}
+                </div>
+            </Canvas>
 
             <table
                 className="docblock-argstable css-6hhrgj"
@@ -119,7 +109,7 @@ const KeyFrameAnimations = () => {
                     ))}
                 </tbody>
             </table>
-        </section>
+        </>
     )
 }
 
