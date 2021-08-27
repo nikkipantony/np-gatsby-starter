@@ -25,7 +25,8 @@ system.
     <li><a href="#Emphasis">Emphasis</a></li>
     <li><a href="#Idiomatic">Idiomatic Text</a></li>
     <li><a href="#Strong">Strong Importance</a></li>
-    <li><a href="#Strike">Strike Through</a></li>
+    <li><a href="#Strike">Strikethrough</a></li>
+    <li><a href="#Delete">Delete / Insert</a></li>
     <li><a href="#Hightlighting">Hightlighting</a></li>
     <li><a href="#Quotation">Quotation</a></li>
     <li><a href="#Citation">Citation</a></li>
@@ -38,7 +39,6 @@ system.
     <li><a href="#U">Unarticulated Annotation</a></li>
     <li><a href="#Variable">Variable</a></li>
     <li><a href="#Address">Address</a></li>
-    <li><a href="#Deleted">Deleted / Inserted Text</a></li>
     <li><a href="#Break">Thematic Break</a></li>
 </ul>
 </nav>
@@ -57,15 +57,13 @@ will not result in an error, but using only one is seen as a
 best practice. Having a single top-level title is also
 arguably better for screenreader users, and for SEO.
 
-<Canvas style={{ margin: "0", }}>
-<div style={{ display: "flex", flexDirection: "column", }}>
+<Canvas className="ally-headings" style={{ margin: "0", }}>
 <h1>H1 Heading</h1>
 <h2>H2 Heading</h2>
 <h3>H3 Heading</h3>
 <h4>H4 Heading</h4>
 <h5>H5 Heading</h5>
 <h6>H6 Heading</h6>
-</div>
 </Canvas>
 
 
@@ -186,7 +184,11 @@ represent this text to help convey meaning when using this
 system.
 
 <Canvas style={{ margin: "0", }}>
-<p>Examples of <i>idiomatic text</i> could include... <br /> "She wondered, <i>What is this writer talking about, anyway?</i>" <br /> or <br /> "The Latin phrase <i>Veni, vidi, vici</i> is often mentioned in music, art, and literature."</p>
+<p>Examples of <i>idiomatic text</i> could include... 
+<br /> "She wondered, <i>What is this writer talking about, anyway?</i>" 
+<br /> or <br /> "The Latin phrase <i>Veni, vidi, vici</i> 
+is often mentioned in music, art, and literature."
+</p>
 </Canvas>
 
 
@@ -198,20 +200,38 @@ The `strong` element indicates that its contents has a
 strong importance, seriousness, or urgency.
 
 <Canvas style={{ margin: "0", }}>
-<p>An example of a sentence that could use the <strong>strong</strong> element is... <br /> "before proceeding, <strong> make sure you put on your safety goggles</strong>."</p>
+<p>An example of a sentence that could use the 
+<strong>strong</strong> element is... <br /> "before proceeding, 
+<strong> make sure you put on your safety goggles</strong>."
+</p>
 </Canvas>
 
 
 <div id="Strike" style={{ marginTop: "80px", }}></div>
 
-## Strike Through
-
-X
+## Strikethrough
+Strikethrough text renders with a line through it to represent
+things that are no longer relevant or no longer accurate. 
+However, this formatting is not appropriate when indicating document 
+edits, for edits use the Delete / Insert formatting as below.
 
 <Canvas style={{ margin: "0", }}>
-    <div>
-        <p>x</p>
-    </div>
+<p>This is an example of <s>Strikethrough</s> text copy.</p>
+</Canvas>
+
+
+<div id="Delete" style={{ marginTop: "80px", }}></div>
+
+## Delete / Insert
+Markup `del` and `ins`
+
+The deleted  element represents a range of text that has been deleted 
+from a document. This can be used when rendering track changes or source code 
+diff information, for example. The inserted element can be used for 
+the opposite purpose, to indicate text that has been added to the document.
+
+<Canvas style={{ margin: "0", }}>
+<p>This is an example of <del>deleted</del> and <ins>inserted</ins> text copy.</p>
 </Canvas>
 
 
@@ -361,19 +381,6 @@ X
 <div id="Address" style={{ marginTop: "80px", }}></div>
 
 ## Address
-
-X
-
-<Canvas style={{ margin: "0", }}>
-    <div>
-        <p>x</p>
-    </div>
-</Canvas>
-
-
-<div id="Deleted" style={{ marginTop: "80px", }}></div>
-
-## Deleted / Inserted Text
 
 X
 

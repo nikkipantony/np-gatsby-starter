@@ -189,6 +189,26 @@ s {
     text-decoration: line-through;
 }
 
+// Deleted / Inserted Text
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ins
+// The <del> element represents a range of text that has been deleted from a document. This can be used when rendering "track changes"
+// or source code diff information, for example.
+// The <ins> element can be used for the opposite purpose: to indicate text that has been added to the document.
+del,
+ins {
+    text-decoration: line-through;
+    background-color: tint(action-color(error), t60);
+    color: brand-color(midnight);
+    font-weight: font-weight(bold);
+    padding: spacing(xxxxs) spacing(xxs);
+}
+
+ins {
+    text-decoration: none;
+    background-color: tint(action-color(success), t60);
+}
+
 // Highlighting
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark
 // The <mark> element represents text which is marked or highlighted for reference or notation purposes,
@@ -392,26 +412,6 @@ address {
     p {
         padding-bottom: spacing(xxs);
     }
-}
-
-// Deleted / Inserted Text
-// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del
-// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ins
-// The <del> element represents a range of text that has been deleted from a document. This can be used when rendering "track changes"
-// or source code diff information, for example.
-// The <ins> element can be used for the opposite purpose: to indicate text that has been added to the document.
-del,
-ins {
-    text-decoration: line-through;
-    background-color: tint(action-color(error), t60);
-    color: brand-color(midnight);
-    font-weight: font-weight(bold);
-    padding: spacing(xxxxs) spacing(xxs);
-}
-
-ins {
-    text-decoration: none;
-    background-color: tint(action-color(success), t60);
 }
 
 // Thematic Break (Horizontal Rule)
