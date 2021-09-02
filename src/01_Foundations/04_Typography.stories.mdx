@@ -26,14 +26,13 @@ to create a higher level of accessibility for products built with this system.
     <li><a href="#Strong">Strong Importance</a></li>
     <li><a href="#Strike">Strikethrough</a></li>
     <li><a href="#Delete">Delete / Insert</a></li>
-    <li><a href="#Hightlighting">Hightlighting</a></li>
+    <li><a href="#Highlighting">Highlighting</a></li>
 </ul>
 <ul style={{ marginTop: "20px", paddingLeft: "20px",  }}>
-    <li><a href="#Quotation">Quotation</a></li>
-    <li><a href="#Citation">Citation</a></li>
+    <li><a href="#Quotation">Quotation & Citation</a></li>
+    <li><a href="#Code">Inline Code & Code Blocks</a></li>
     <li><a href="#Abb">Abbreviation</a></li>
     <li><a href="#Def">Definitions</a></li>
-    <li><a href="#CodeBlocks">Code Blocks</a></li>
     <li><a href="#Time">Time and Dates</a></li>
     <li><a href="#key">Keyboard Input</a></li>
     <li><a href="#Sample">Sample Output</a></li>
@@ -241,18 +240,24 @@ The `del` and `ins` elements should be used to create these components.
 
 ## Highlighting
 
-X
+Highlight formatting is used for reference or notation purposes. The `mark` element is 
+used to represent text which is marked or highlighted. The presence of the `mark` element 
+is not announced by most screen reading technology in its default configuration therefore 
+for accessibility it should be announced using a span with the `.sr-only` class at the 
+start and end of the highlighted text as in the example shown below.
 
 <Canvas style={{ margin: "0", }}>
-    <div>
-        <p>x</p>
-    </div>
+<p>
+<mark>
+<span className="sr-only"> [highlight starts] </span> Highlighed Text <span className="sr-only"> [highlight ends] </span>
+</mark>
+</p>
 </Canvas>
 
 
 <div id="Quotation" style={{ marginTop: "80px", }}></div>
 
-## Quotation
+## Quotation & Citation
 
 X
 
@@ -263,11 +268,11 @@ X
 </Canvas>
 
 
-<div id="Citation" style={{ marginTop: "80px", }}></div>
+<div id="Code" style={{ marginTop: "80px", }}></div>
 
-## Citation
+## Inline Code & Code Blocks
 
-X
+Preformatted Text (Code Blocks)...
 
 <Canvas style={{ margin: "0", }}>
     <div>
@@ -294,19 +299,6 @@ X
 ## Definitions
 
 X
-
-<Canvas style={{ margin: "0", }}>
-    <div>
-        <p>x</p>
-    </div>
-</Canvas>
-
-
-<div id="CodeBlocks" style={{ marginTop: "80px", }}></div>
-
-## Code Blocks
-
-Preformatted Text (Code Blocks)...
 
 <Canvas style={{ margin: "0", }}>
     <div>
