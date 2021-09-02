@@ -29,8 +29,10 @@ to create a higher level of accessibility for products built with this system.
     <li><a href="#Highlighting">Highlighting</a></li>
 </ul>
 <ul style={{ marginTop: "20px", paddingLeft: "20px",  }}>
-    <li><a href="#Quotation">Quotation & Citation</a></li>
-    <li><a href="#Code">Inline Code & Code Blocks</a></li>
+    <li><a href="#Quotation">Inline Quotation</a></li>
+    <li><a href="#BlockQuotation">Block Quotation</a></li>
+    <li><a href="#Code">Inline code</a></li>
+    <li><a href="#BlockCode">Code Block</a></li>
     <li><a href="#Abb">Abbreviation</a></li>
     <li><a href="#Def">Definitions</a></li>
     <li><a href="#Time">Time and Dates</a></li>
@@ -257,9 +259,44 @@ start and end of the highlighted text as in the example shown below.
 
 <div id="Quotation" style={{ marginTop: "80px", }}></div>
 
-## Quotation & Citation
+## Inline Quotation
 
-X
+For inline quotation within a paragraph the `q` element should be used to indicate 
+that the enclosed text is a short inline quotation. Most modern web browsers implement 
+this by surrounding the text in quotation marks and a URL for the source of the quotation 
+may be given using the `cite` attribute and as an external link as in the below example.
+
+<Canvas style={{ margin: "0", }}>
+<p>When Dave asks HAL to open the pod bay doors, HAL answers: <q cite="https://www.imdb.com/title/tt0062622/quotes/qt0396921"><a title="imdb.com" href="https://www.imdb.com/title/tt0062622/quotes/qt0396921" rel="noopener noreferrer" target="_blank">I'm sorry, Dave. I'm afraid I can't do that.</a></q></p>
+</Canvas>
+
+
+<div id="BlockQuotation" style={{ marginTop: "80px", }}></div>
+
+## Block Quotation
+
+For longer quotations a quotation block component should be used with 
+the `blockquote` element which indicates that the enclosed text is an extended quotation.
+Usually, this is rendered visually by indentation and a URL for the source of the quotation
+may be given using the `cite` attribute, while a text representation of the source can 
+be given using the `cite` element. An external link to the cited source may also be given 
+if the source is a URL as in the below example.
+
+<Canvas style={{ margin: "0", }}>
+<figure>
+<blockquote cite="https://www.huxley.net/bnw/four.html">
+<p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.</p>
+</blockquote>
+<figcaption>— Aldous Huxley, <cite><a title="huxley.net/bnw/four" href="https://www.huxley.net/bnw/four.html" rel="noopener noreferrer" target="_blank">Brave New World</a></cite></figcaption>
+</figure>
+</Canvas>
+
+
+<div id="Code" style={{ marginTop: "80px", }}></div>
+
+## Inline Code
+
+Preformatted Text (Code Blocks)...
 
 <Canvas style={{ margin: "0", }}>
     <div>
@@ -268,9 +305,9 @@ X
 </Canvas>
 
 
-<div id="Code" style={{ marginTop: "80px", }}></div>
+<div id="BlockCode" style={{ marginTop: "80px", }}></div>
 
-## Inline Code & Code Blocks
+## Code Block
 
 Preformatted Text (Code Blocks)...
 

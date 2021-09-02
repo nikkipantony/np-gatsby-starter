@@ -231,6 +231,13 @@ mark {
 q {
     font-style: italic;
     color: brand-color(midnight);
+
+    a,
+    a:link,
+    a:visited,
+    a:active {
+        font-weight: font-weight(regular);
+    }
 }
 
 // Block Quotations
@@ -240,7 +247,9 @@ q {
 // may be given using the cite attribute, while a text representation of the source can be given
 // using the <cite> element.
 blockquote {
-    margin: spacing(xxxl) 0;
+    margin: spacing(xxxl) 0 spacing(l);
+    width: 100%;
+    max-width: 740px;
 
     p {
         font-size: font-size(cm);
@@ -254,13 +263,24 @@ blockquote {
         background: brand-color(gold);
     }
 
-    footer {
-        font-size: font-size(cm);
-        color: brand-color(midnight);
+    & ~ figcaption {
+        font-size: font-size(cs);
         font-weight: font-weight(bold);
-        padding: spacing(l) spacing(xxs) spacing(xl);
+        color: brand-color(midnight);
+        font-style: italic;
+        opacity: opacity(o75);
+        line-height: leading(regular);
         text-align: right;
+        padding: 0 spacing(xxs) spacing(xl);
+        max-width: 740px;
     }
+}
+
+figure > figcaption > cite > a,
+figure > figcaption > cite > a:link,
+figure > figcaption > cite > a:visited,
+figure > figcaption > cite > a:active {
+    font-size: font-size(cs);
 }
 
 // Citations
@@ -268,7 +288,8 @@ blockquote {
 // The <cite> element is used to describe a reference to a cited creative work, and must include
 // the title of that work. The reference may be in an abbreviated form according to context-appropriate
 // conventions related to citation metadata.
-cite {
+cite,
+cite a {
     font-style: italic;
 }
 
