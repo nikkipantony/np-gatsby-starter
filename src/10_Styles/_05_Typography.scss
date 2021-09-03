@@ -16,8 +16,6 @@
 // https://css-tricks.com/snippets/css/using-font-face
 // https://google-webfonts-helper.herokuapp.com/fonts
 
-// TODO: Reorder!!!
-
 // Headings
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements
 h1,
@@ -136,6 +134,9 @@ strong {
 
 // Bring Attention
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/b
+b {
+    font-weight: font-weight(bold);
+}
 
 // Highlighting
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark
