@@ -191,12 +191,13 @@ start and end of the highlighted text as in the example shown below.
 
 ## Abbreviation
 
-X
+For abbreviations the `abbr` HTML element is used to represent an abbreviation or acronym. 
+The `title` attribute is then used to provide an expansion or description for the abbreviation 
+and when the user hovers over the text the description is shown. The `title` must only contain 
+the description and nothing else.
 
 <Canvas style={{ margin: "0", }}>
-    <div>
-        <p>x</p>
-    </div>
+<p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
 </Canvas>
 
 
