@@ -18,29 +18,29 @@ to create a higher level of accessibility for products built with this system.
     <li><a href="#Headings">Headings</a></li>
     <li><a href="#Paragraphs">Paragraphs</a></li>
     <li><a href="#Links">Links</a></li>
-    <li><a href="#Lists">Lists</a></li>
-    <li><a href="#FigureCaptions">Figure Captions</a></li>
     <li><a href="#Microcopy">Microcopy</a></li>
     <li><a href="#Emphasis">Emphasis</a></li>
     <li><a href="#Idiomatic">Idiomatic Text</a></li>
     <li><a href="#Strong">Strong Importance</a></li>
+    <li><a href="#Highlighting">Highlighting</a></li>
+    <li><a href="#Abb">Abbreviation</a></li>
+    <li><a href="#Def">Definitions</a></li>
+    <li><a href="#U">Unarticulated Annotation</a></li>
     <li><a href="#Strike">Strikethrough</a></li>
     <li><a href="#Delete">Delete / Insert</a></li>
-    <li><a href="#Highlighting">Highlighting</a></li>
 </ul>
 <ul style={{ marginTop: "20px", paddingLeft: "20px",  }}>
+    <li><a href="#Lists">Lists</a></li>
+    <li><a href="#Time">Time and Dates</a></li>
+    <li><a href="#Address">Address</a></li>
+    <li><a href="#FigureCaptions">Figure Captions</a></li>
     <li><a href="#Quotation">Inline Quotation</a></li>
     <li><a href="#BlockQuotation">Block Quotation</a></li>
     <li><a href="#Code">Inline code</a></li>
     <li><a href="#BlockCode">Code Block</a></li>
-    <li><a href="#Abb">Abbreviation</a></li>
-    <li><a href="#Def">Definitions</a></li>
-    <li><a href="#Time">Time and Dates</a></li>
-    <li><a href="#key">Keyboard Input</a></li>
     <li><a href="#Sample">Sample Output</a></li>
-    <li><a href="#U">Unarticulated Annotation</a></li>
     <li><a href="#Variable">Variable</a></li>
-    <li><a href="#Address">Address</a></li>
+    <li><a href="#key">Keyboard Input</a></li>
     <li><a href="#Break">Thematic Break</a></li>
 </ul>
 </nav>
@@ -91,7 +91,7 @@ Links allow users to navigate to a different location. They can
 be presented inline inside a paragraph or as standalone text.
 The `a` element with its `href` attribute, create hyperlink components
 know as an Anchor link which can lead to web pages, files, email addresses,
-locations etc in the same page, or anywhere else a URL can
+locations, phone numbers and sms etc in the same page, or anywhere else a URL can
 address. Content within each `a` should indicate the link's
 destination. Underline should only be used for text links
 and should never be used as a mechanism for adding emphasis.
@@ -102,47 +102,6 @@ help improve accessibility.
 
 <Canvas style={{ margin: "0", }}>
 <p>This is an <a href="#">Anchor link</a> example.</p>
-</Canvas>
-
-
-<div id="Lists" style={{ marginTop: "80px", }}></div>
-
-## Lists
-
-The `ul` element represents an unordered list of items,
-rendered as a bulleted list while the `ol` element
-represents an ordered list of items renders as a numbered
-list. Lists should either be part of a section with other
-text for context or have a section heading.
-
-<Canvas style={{ margin: "0", }}>
-<ul>
-<li>This is an unordered list example</li>
-<li>List items that are not in an order</li>
-<li>It is just a list of items</li>
-</ul>
-<ol>
-<li>This is an example of an ordered list</li>
-<li>Items have a hierarchy</li>
-<li>Items are shown with a number</li>
-</ol>
-</Canvas>
-
-
-<div id="FigureCaptions" style={{ marginTop: "80px", }}></div>
-
-## Figure Captions
-
-The `figcaption` element represents a caption or legend
-describing the rest of the content of its parent `figure`
-element such as for an image. When using this design system
-you should use the `Figure` Atom component for this purpose.
-
-<Canvas style={{ margin: "0", }}>
-<figure>
-<img src="https://via.placeholder.com/300x200.png?text=Figure+Placeholder" alt="figure placeholder" />
-<figcaption>Example figure caption.</figcaption>
-</figure>
 </Canvas>
 
 
@@ -209,6 +168,64 @@ strong importance, seriousness, or urgency.
 </Canvas>
 
 
+<div id="Highlighting" style={{ marginTop: "80px", }}></div>
+
+## Highlighting
+
+Highlight formatting is used for reference or notation purposes. The `mark` element is 
+used to represent text which is marked or highlighted. The presence of the `mark` element 
+is not announced by most screen reading technology in its default configuration therefore 
+for accessibility it should be announced using a span with the `.sr-only` class at the 
+start and end of the highlighted text as in the example shown below.
+
+<Canvas style={{ margin: "0", }}>
+<p>
+<mark>
+<span className="sr-only"> [highlight starts] </span> Highlighed Text <span className="sr-only"> [highlight ends] </span>
+</mark>
+</p>
+</Canvas>
+
+
+<div id="Abb" style={{ marginTop: "80px", }}></div>
+
+## Abbreviation
+
+X
+
+<Canvas style={{ margin: "0", }}>
+    <div>
+        <p>x</p>
+    </div>
+</Canvas>
+
+
+<div id="Def" style={{ marginTop: "80px", }}></div>
+
+## Definitions
+
+X
+
+<Canvas style={{ margin: "0", }}>
+    <div>
+        <p>x</p>
+    </div>
+</Canvas>
+
+
+<div id="U" style={{ marginTop: "80px", }}></div>
+
+## Unarticulated Annotation
+
+X
+
+<Canvas style={{ margin: "0", }}>
+    <div>
+        <p>x</p>
+    </div>
+</Canvas>
+
+
 <div id="Strike" style={{ marginTop: "80px", }}></div>
 
 ## Strikethrough
@@ -238,22 +255,70 @@ The `del` and `ins` elements should be used to create these components.
 </Canvas>
 
 
-<div id="Highlighting" style={{ marginTop: "80px", }}></div>
+<div id="Lists" style={{ marginTop: "80px", }}></div>
 
-## Highlighting
+## Lists
 
-Highlight formatting is used for reference or notation purposes. The `mark` element is 
-used to represent text which is marked or highlighted. The presence of the `mark` element 
-is not announced by most screen reading technology in its default configuration therefore 
-for accessibility it should be announced using a span with the `.sr-only` class at the 
-start and end of the highlighted text as in the example shown below.
+The `ul` element represents an unordered list of items,
+rendered as a bulleted list while the `ol` element
+represents an ordered list of items renders as a numbered
+list. Lists should either be part of a section with other
+text for context or have a section heading.
 
 <Canvas style={{ margin: "0", }}>
-<p>
-<mark>
-<span className="sr-only"> [highlight starts] </span> Highlighed Text <span className="sr-only"> [highlight ends] </span>
-</mark>
-</p>
+<ul>
+<li>This is an unordered list example</li>
+<li>List items that are not in an order</li>
+<li>It is just a list of items</li>
+</ul>
+<ol>
+<li>This is an example of an ordered list</li>
+<li>Items have a hierarchy</li>
+<li>Items are shown with a number</li>
+</ol>
+</Canvas>
+
+
+<div id="Time" style={{ marginTop: "80px", }}></div>
+
+## Time and Dates
+
+X
+
+<Canvas style={{ margin: "0", }}>
+    <div>
+        <p>x</p>
+    </div>
+</Canvas>
+
+
+<div id="Address" style={{ marginTop: "80px", }}></div>
+
+## Address
+
+X
+
+<Canvas style={{ margin: "0", }}>
+    <div>
+        <p>x</p>
+    </div>
+</Canvas>
+
+
+<div id="FigureCaptions" style={{ marginTop: "80px", }}></div>
+
+## Figure Captions
+
+The `figcaption` element represents a caption or legend
+describing the rest of the content of its parent `figure`
+element such as for an image. When using this design system
+you should use the `Figure` Atom component for this purpose.
+
+<Canvas style={{ margin: "0", }}>
+<figure>
+<img src="https://via.placeholder.com/300x200.png?text=Figure+Placeholder" alt="figure placeholder" />
+<figcaption>Example figure caption.</figcaption>
+</figure>
 </Canvas>
 
 
@@ -314,6 +379,9 @@ Preformatted text is used to display code within Code Blocks. The `pre` HTML5 el
 preformatted text which is to be presented exactly as written. The text is rendered using the design systems 
 monospace typeface and is used wrapped around `code` elements to show the Code Block.
 
+<!-- Note: 
+`pre` element does not work within <Canvas> so the example code wraps 
+-->
 <Canvas style={{ margin: "0", }}>
 <pre>
 <code>The is a preformatted code block</code>
@@ -321,74 +389,9 @@ monospace typeface and is used wrapped around `code` elements to show the Code B
 </Canvas>
 
 
-<div id="Abb" style={{ marginTop: "80px", }}></div>
-
-## Abbreviation
-
-X
-
-<Canvas style={{ margin: "0", }}>
-    <div>
-        <p>x</p>
-    </div>
-</Canvas>
-
-
-<div id="Def" style={{ marginTop: "80px", }}></div>
-
-## Definitions
-
-X
-
-<Canvas style={{ margin: "0", }}>
-    <div>
-        <p>x</p>
-    </div>
-</Canvas>
-
-
-<div id="Time" style={{ marginTop: "80px", }}></div>
-
-## Time and Dates
-
-X
-
-<Canvas style={{ margin: "0", }}>
-    <div>
-        <p>x</p>
-    </div>
-</Canvas>
-
-
-<div id="key" style={{ marginTop: "80px", }}></div>
-
-## Keyboard Input
-
-X
-
-<Canvas style={{ margin: "0", }}>
-    <div>
-        <p>x</p>
-    </div>
-</Canvas>
-
-
 <div id="Sample" style={{ marginTop: "80px", }}></div>
 
 ## Sample Output
-
-X
-
-<Canvas style={{ margin: "0", }}>
-    <div>
-        <p>x</p>
-    </div>
-</Canvas>
-
-
-<div id="U" style={{ marginTop: "80px", }}></div>
-
-## Unarticulated Annotation
 
 X
 
@@ -412,9 +415,9 @@ X
 </Canvas>
 
 
-<div id="Address" style={{ marginTop: "80px", }}></div>
+<div id="key" style={{ marginTop: "80px", }}></div>
 
-## Address
+## Keyboard Input
 
 X
 

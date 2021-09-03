@@ -16,6 +16,8 @@
 // https://css-tricks.com/snippets/css/using-font-face
 // https://google-webfonts-helper.herokuapp.com/fonts
 
+// TODO: Reorder!!!
+
 // Headings
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements
 h1,
@@ -77,7 +79,7 @@ p {
     margin-bottom: spacing(s);
 }
 
-// Anchor Links
+// Links
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a
 a,
 a:link,
@@ -95,33 +97,6 @@ a:visited {
     &.focus-visible {
         background: brand-color(gold);
     }
-}
-
-// Unordered and Ordered Lists
-// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul
-// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol
-ul,
-ol {
-    margin: spacing(xl) 0;
-    padding-left: spacing(xxxxl);
-
-    li {
-        margin: spacing(xxs) 0;
-        font-size: font-size(cm);
-        font-weight: font-weight(bold);
-    }
-}
-
-// Figure Captions
-// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption
-figcaption {
-    font-size: font-size(cs);
-    font-weight: font-weight(bold);
-    color: brand-color(midnight);
-    font-style: italic;
-    opacity: opacity(o75);
-    line-height: leading(tall);
-    text-align: left;
 }
 
 // Microcopy
@@ -159,6 +134,48 @@ strong {
     color: brand-color(midnight);
 }
 
+// Highlighting
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark
+// https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible
+// Accessibility Concerns
+// The presence of the mark element is not announced by most screen reading technology in its default configuration.
+// It can be made to be announced using a span with the .sr-only class at the start and end of the highlighted text.
+// ie: <mark><span className="sr-only"> [highlight starts] </span> Highlighed Text <span className="sr-only"> [highlight ends] </span><mark>
+mark {
+    background-color: brand-color(gold);
+    color: brand-color(midnight);
+}
+
+// Abbreviations
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr
+abbr {
+    font-style: italic;
+    text-decoration: none;
+    border-bottom: dotted brand-color(midnight) 3px;
+    cursor: help;
+}
+
+// Definitions
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dfn
+dfn {
+    font-size: font-size(cm);
+    font-weight: font-weight(bold);
+    font-style: italic;
+    color: brand-color(midnight);
+}
+
+// Unarticulated Annotation
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/u
+// The <u> element represents inline text which should be rendered in a way that indicates that it has a non-textual
+// annotation. This is rendered by default as a simple solid underline, but may be altered using CSS.
+// This element used to be called the "Underline" element in older versions of HTML, and is still sometimes misused
+// in this way. To underline text, you should instead apply a style that includes the CSS text-decoration property set to underline.
+u {
+    font-style: italic;
+    text-decoration: none;
+    border-bottom: border(error);
+}
+
 // Strikethrough
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/s
 s {
@@ -182,16 +199,60 @@ ins {
     background-color: tint(action-color(success), t60);
 }
 
-// Highlighting
-// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark
-// https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible
-// Accessibility Concerns
-// The presence of the mark element is not announced by most screen reading technology in its default configuration.
-// It can be made to be announced using a span with the .sr-only class at the start and end of the highlighted text.
-// ie: <mark><span className="sr-only"> [highlight starts] </span> Highlighed Text <span className="sr-only"> [highlight ends] </span><mark>
-mark {
-    background-color: brand-color(gold);
+// Lists
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol
+ul,
+ol {
+    margin: spacing(xl) 0;
+    padding-left: spacing(xxxxl);
+
+    li {
+        margin: spacing(xxs) 0;
+        font-size: font-size(cm);
+        font-weight: font-weight(bold);
+    }
+}
+
+// Time
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time
+// The <time> element represents a specific period in time. It may include the datetime attribute to translate dates into
+// machine-readable format, allowing for better search engine results or custom features such as reminders.
+time {
+    font-family: typeface(archivo);
+    font-size: font-size(cm);
+    font-weight: font-weight(bold);
+    line-height: leading(regular);
+    letter-spacing: tracking(normal);
     color: brand-color(midnight);
+}
+
+// Address
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address
+// The <address> element indicates that the enclosed HTML provides contact information for a person or people,
+// or for an organization. It may include any type of contact information that is needed, such as a physical address, URL,
+// email address, phone number, social media handle, geographic coordinates, and so forth.
+// It used to be the case that an <address> element was only supposed to be used to represent the contact information of the
+// document's author, however, its definition has since been updated so it can now be used to mark up arbitrary addresses.
+address {
+    font-style: italic;
+    padding-bottom: spacing(l);
+
+    p {
+        padding-bottom: spacing(xxs);
+    }
+}
+
+// Figure Captions
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption
+figcaption {
+    font-size: font-size(cs);
+    font-weight: font-weight(bold);
+    color: brand-color(midnight);
+    font-style: italic;
+    opacity: opacity(o75);
+    line-height: leading(tall);
+    text-align: left;
 }
 
 // Quotation
@@ -247,7 +308,7 @@ figure > figcaption > cite > a:active {
     font-size: font-size(cs);
 }
 
-// Citations
+// Citations (for Quotations)
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/cite
 cite,
 cite a {
@@ -270,8 +331,10 @@ code {
     border: 0;
 }
 
-// Preformatted Text (Code Blocks)
+// Code Blocks (Preformatted Text)
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre
+// Note:
+// `pre` element does not work within <Canvas> so the example code wraps
 pre {
     display: block;
     color: brand-color(snow);
@@ -284,34 +347,30 @@ pre {
     margin: 0 0 spacing(xl);
 }
 
-// Abbreviations
-// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/abbr
-abbr {
-    font-style: italic;
-    text-decoration: none;
-    border-bottom: dotted brand-color(midnight) 3px;
-    cursor: help;
+// Sample Output
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/samp
+// The <samp> element is used to enclose inline text which represents sample (or quoted) output from a
+// computer program. Its contents are typically rendered using the browser's default mono spaced font.
+samp {
+    display: block;
+    color: brand-color(snow);
+    font-size: font-size(cm);
+    font-weight: font-weight(bold);
+    background-color: brand-color(midnight);
+    border-radius: radius(square);
+    font-family: typeface(mono);
+    padding: spacing(m);
+    margin: 0 0 spacing(xl);
 }
 
-// Definitions
-// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dfn
-dfn {
+// Variable
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/var
+// The <var> element represents the name of a variable in a mathematical expression or a programming context.
+// It's typically presented using an italicized version of the current typeface, although that behavior is browser-dependent.
+var {
     font-size: font-size(cm);
     font-weight: font-weight(bold);
     font-style: italic;
-    color: brand-color(midnight);
-}
-
-// Time
-// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time
-// The <time> element represents a specific period in time. It may include the datetime attribute to translate dates into
-// machine-readable format, allowing for better search engine results or custom features such as reminders.
-time {
-    font-family: typeface(archivo);
-    font-size: font-size(cm);
-    font-weight: font-weight(bold);
-    line-height: leading(regular);
-    letter-spacing: tracking(normal);
     color: brand-color(midnight);
 }
 
@@ -334,61 +393,6 @@ kbd {
         0 spacing(xxxs) 0 0 shade(brand-color(snow), s20) inset;
     padding: spacing(xxxs) spacing(xxs);
     white-space: nowrap;
-}
-
-// Sample Output
-// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/samp
-// The <samp> element is used to enclose inline text which represents sample (or quoted) output from a
-// computer program. Its contents are typically rendered using the browser's default mono spaced font.
-samp {
-    display: block;
-    color: brand-color(snow);
-    font-size: font-size(cm);
-    font-weight: font-weight(bold);
-    background-color: brand-color(midnight);
-    border-radius: radius(square);
-    font-family: typeface(mono);
-    padding: spacing(m);
-    margin: 0 0 spacing(xl);
-}
-
-// Unarticulated Annotation
-// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/u
-// The <u> element represents inline text which should be rendered in a way that indicates that it has a non-textual
-// annotation. This is rendered by default as a simple solid underline, but may be altered using CSS.
-// This element used to be called the "Underline" element in older versions of HTML, and is still sometimes misused
-// in this way. To underline text, you should instead apply a style that includes the CSS text-decoration property set to underline.
-u {
-    font-style: italic;
-    text-decoration: none;
-    border-bottom: border(error);
-}
-
-// Variable
-// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/var
-// The <var> element represents the name of a variable in a mathematical expression or a programming context.
-// It's typically presented using an italicized version of the current typeface, although that behavior is browser-dependent.
-var {
-    font-size: font-size(cm);
-    font-weight: font-weight(bold);
-    font-style: italic;
-    color: brand-color(midnight);
-}
-
-// Address
-// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/address
-// The <address> element indicates that the enclosed HTML provides contact information for a person or people,
-// or for an organization. It may include any type of contact information that is needed, such as a physical address, URL,
-// email address, phone number, social media handle, geographic coordinates, and so forth.
-// It used to be the case that an <address> element was only supposed to be used to represent the contact information of the
-// document's author, however, its definition has since been updated so it can now be used to mark up arbitrary addresses.
-address {
-    font-style: italic;
-    padding-bottom: spacing(l);
-
-    p {
-        padding-bottom: spacing(xxs);
-    }
 }
 
 // Thematic Break (Horizontal Rule)
