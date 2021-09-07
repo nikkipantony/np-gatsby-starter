@@ -82,7 +82,7 @@
     "serve-g": "http-server ./public -p 8080",
     "serve-s": "http-server ./public-storybook -p 8081",
     "serve-d": "http-server ./public-design-system -p 8082",
-    "gen-dt": "sass-export src/02_DesignTokens/**/*.scss -o ./design_tokens/design-tokens.json -a",
+    "gen-dt": "sass-export src/01_DesignTokens/**/*.scss -o ./design_tokens/design-tokens.json -a",
     "start": "npm run develop",
     "build": "gatsby build",
     "develop": "gatsby develop",

@@ -1,6 +1,6 @@
 import { Meta, Canvas } from '@storybook/addon-docs';
 
-<Meta title="Foundations/Typography Guidelines" parameters={{ previewTabs: { canvas: { hidden: true } } }} />
+<Meta title="Typography/Typography Guidelines" parameters={{ previewTabs: { canvas: { hidden: true } } }} />
 
 # Typography Guidelines
 
@@ -305,12 +305,14 @@ text for context or have a section heading.
 
 ## Time and Dates
 
-X
+The `<time>` element represents a specific period in time. It may include the datetime attribute to translate dates into
+machine-readable format, allowing for better search engine results or custom features such as reminders.
 
 <Canvas style={{ margin: "0", }}>
-    <div>
-        <p>x</p>
-    </div>
+<p>
+  The last meeting was on <time datetime="2020-07-07">7 July '20</time>.
+<br />The next meeting starts at <time datetime="20:00">8pm</time> on <time datetime="2022-07-01">7 July '22</time> and will last <time datetime="PT2H30M">2 and a half hours</time>.
+</p>
 </Canvas>
 
 
