@@ -6,8 +6,12 @@ import { Meta, Canvas } from '@storybook/addon-docs';
 
 This section visually presents type formatting decisions using this 
 design systems typography design tokens. This guide shows the correct
-use of HTML5 markup to be used as well as styling for consistency 
+use of HTML5 semantic markup to be used as well as styling for consistency 
 to create a higher level of accessibility for products built with this system.
+It should also be noted that no class's (className's) are applied to 
+elements to render this styling, the styling should be applied directly to
+the elements to maintain consistency. In circumstances when a class is needed, 
+a component should be built instead with the BEM naming convention used.
 
 <div style={{ width: "100%", boxShadow: "rgb(0 0 0 / 10%) 0 4px 6px 0", border: "2px solid rgba(0, 0, 13, 1)", borderRadius: "4px", padding: "30px", marginTop: "20px", }}>
 
@@ -63,6 +67,7 @@ using more than one will not result in an error, but using only
 one is seen as best practice. Having a single top-level title is 
 also arguably better for screenreader users, and for SEO.
 
+### Coded Example 
 <Canvas className="ally-headings" style={{ margin: "0", }}>
 <h1>H1 Heading</h1>
 <h2>H2 Heading</h2>
@@ -81,6 +86,7 @@ Paragraphs are represented in visual media as blocks of text structured to
 group related content and separate them from adjacent blocks
 by blank lines. The `<p>` element is used to create paragraph components.
 
+### Coded Example 
 <Canvas style={{ margin: "0", }}>
 <p>This is a paragraph body text example.</p>
 </Canvas>
@@ -103,6 +109,7 @@ Atom component for external links, the `<NavLink>` component
 for navigation and the `<SkipLink>` to skip to main content to
 help improve accessibility.
 
+### Coded Example 
 <Canvas style={{ margin: "0", }}>
 <p>This is an <a href="#">Anchor link</a> example.</p>
 </Canvas>
@@ -117,6 +124,7 @@ small print, such as copyright and legal text. The `<small>`
 element should be used instead of simply a smaller
 font size for it's semantic meaning.
 
+### Coded Example 
 <Canvas style={{ margin: "0", }}>
 <p><small>Microcopy text example.</small></p>
 </Canvas>
@@ -132,6 +140,7 @@ rest of the text. It is the equivalent of prosody stress in
 speech. The `<em>` element is used to highlight emphasis and
 can affect the meaning of the sentence itself.
 
+### Coded Example 
 <Canvas style={{ margin: "0", }}>
 <p>This is an example of <em>emphasis</em> in text copy.</p>
 </Canvas>
@@ -149,6 +158,7 @@ identify the language). The `<i>` element should be used to
 represent this text to help convey meaning when using this
 system.
 
+### Coded Example 
 <Canvas style={{ margin: "0", }}>
 <p>Examples of <i>idiomatic text</i> could include... 
 <br /> "She wondered, <i>What is this writer talking about, anyway?</i>" 
@@ -164,6 +174,7 @@ system.
 The `<strong>` element indicates that its contents has a
 strong importance, seriousness, or urgency.
 
+### Coded Example 
 <Canvas style={{ margin: "0", }}>
 <p>An example of a sentence that could use the <strong>strong</strong> element is... <br /> "before proceeding, 
 <strong> make sure you put on your safety goggles</strong>."
@@ -180,6 +191,7 @@ special importance to `<b>` element should be used which gives the text a heavie
 weight than the standard paragraph styling. You can use this styling for cases 
 such as for keywords in a summary or product names in a review.
 
+### Coded Example 
 <Canvas style={{ margin: "0", }}>
 <p>The two most popular science courses offered by the school are <b>chemistry</b> (the study of chemicals and the composition of substances) and <b>physics</b> (the study of the nature and properties of matter and energy).</p>
 </Canvas>
@@ -195,6 +207,7 @@ is not announced by most screen reading technology in its default configuration 
 for accessibility it should be announced using a span with the `<.sr-only>` class at the 
 start and end of the highlighted text as in the example shown below.
 
+### Coded Example 
 <Canvas style={{ margin: "0", }}>
 <p>
 <mark>
@@ -213,6 +226,7 @@ The `<title>` attribute is then used to provide an expansion or description for 
 and when the user hovers over the text the description is shown. The `<title>` must only contain 
 the description and nothing else.
 
+### Coded Example 
 <Canvas style={{ margin: "0", }}>
 <p>You can use <abbr title="Cascading Style Sheets">CSS</abbr> to style your <abbr title="HyperText Markup Language">HTML</abbr>.</p>
 </Canvas>
@@ -227,6 +241,7 @@ The `<dfn>` element is used to indicate the term being defined within the contex
 phrase or sentence and the `<p>` element which is the nearest ancestor of the `<dfn>` is considered 
 to be the definition of the term.
 
+### Coded Example 
 <Canvas style={{ margin: "0", }}>
 <p>The HTML Definition element `<dfn>&lt;dfn&gt;</dfn>` is used to indicate the term being defined.</p>
 </Canvas>
@@ -243,6 +258,7 @@ misused in this way. To underline text, you should instead apply a style that in
 CSS text-decoration property set to underline. The `<u>` element should not be used to underline 
 text for presentation purposes, or to denote titles of books.
 
+### Coded Example 
 <Canvas style={{ margin: "0", }}>
 <p>You could use unarticulated annotation formatting to highlight <u>speling</u> mistakes.</p>
 </Canvas>
@@ -257,6 +273,7 @@ text is created using the `<s>` element.
 However, this formatting is not appropriate when indicating document 
 edits, for edits use the Delete / Insert formatting as below.
 
+### Coded Example 
 <Canvas style={{ margin: "0", }}>
 <p>This is an example of <s>Strikethrough</s> text copy.</p>
 </Canvas>
@@ -272,6 +289,7 @@ diff information, for example. The inserted element can be used for
 the opposite purpose, to indicate text that has been added to the document. 
 The `<del>` and `<ins>` elements should be used to create these components.
 
+### Coded Example 
 <Canvas style={{ margin: "0", }}>
 <p>This is an example of <del>deleted</del> and <ins>inserted</ins> text copy.</p>
 </Canvas>
@@ -287,6 +305,7 @@ represents an ordered list of items renders as a numbered
 list. Lists should either be part of a section with other
 text for context or have a section heading.
 
+### Coded Example 
 <Canvas style={{ margin: "0", }}>
 <ul>
 <li>This is an unordered list example</li>
@@ -305,9 +324,14 @@ text for context or have a section heading.
 
 ## Time and Dates
 
-The `<time>` element represents a specific period in time. It may include the datetime attribute to translate dates into
-machine-readable format, allowing for better search engine results or custom features such as reminders.
+When representing a specific period in time the `<time>` element should be used so that it is styled
+differently to stand out from the rest of the text and also to make the data machine readable. This 
+allows for better search engine results and for possible custom features such as reminders. The `<time>`
+element can be used to render a specific time using the 24-hour clock, a date using the Gregorian calendar 
+(with optional time and timezone information), or a time duration. 
 
+
+### Coded Example 
 <Canvas style={{ margin: "0", }}>
 <p>
   The last meeting was on <time datetime="2020-07-07">7 July '20</time>.
@@ -322,6 +346,7 @@ machine-readable format, allowing for better search engine results or custom fea
 
 X
 
+### Coded Example 
 <Canvas style={{ margin: "0", }}>
     <div>
         <p>x</p>
@@ -338,6 +363,7 @@ describing the rest of the content of its parent `<figure>`
 element such as for an image. When using this design system
 you should use the `<Figure>` Atom component for this purpose.
 
+### Coded Example 
 <Canvas style={{ margin: "0", }}>
 <figure>
 <img src="https://via.placeholder.com/300x200.png?text=Figure+Placeholder" alt="figure placeholder" />
@@ -355,6 +381,7 @@ that the enclosed text is a short inline quotation. Most modern web browsers imp
 this by surrounding the text in quotation marks and a URL for the source of the quotation 
 may be given using the `<cite>` attribute and as an external link as in the below example.
 
+### Coded Example 
 <Canvas style={{ margin: "0", }}>
 <p>When Dave asks HAL to open the pod bay doors, HAL answers: <q cite="https://www.imdb.com/title/tt0062622/quotes/qt0396921"><a title="imdb.com" href="https://www.imdb.com/title/tt0062622/quotes/qt0396921" rel="noopener noreferrer" target="_blank">I'm sorry, Dave. I'm afraid I can't do that.</a></q></p>
 </Canvas>
@@ -371,6 +398,7 @@ may be given using the `<cite>` attribute, while a text representation of the so
 be given using the `<cite>` element. An external link to the cited source may also be given 
 if the source is a URL as in the below example.
 
+### Coded Example 
 <Canvas style={{ margin: "0", }}>
 <figure>
 <blockquote cite="https://www.huxley.net/bnw/four.html">
@@ -390,6 +418,7 @@ contents styled in a fashion intended to indicate that the text is a short fragm
 This code content is displayed using the design systems monospace typeface with a darker background 
 than other paragraph text.
 
+### Coded Example 
 <Canvas style={{ margin: "0", }}>
 <p>The function <code>selectAll()</code> highlights all the text in the input field.</p>
 </Canvas>
@@ -404,8 +433,10 @@ preformatted text which is to be presented exactly as written. The text is rende
 monospace typeface and is used wrapped around `<code>` elements to show the Code Block.
 
 <!-- Note: 
-`<pre>` element does not work within <Canvas> so the example code wraps 
+`<pre>` element does not work within ### Coded Example 
+<Canvas> so the example code wraps 
 -->
+### Coded Example 
 <Canvas style={{ margin: "0", }}>
 <pre>
 <code>The is a preformatted code block</code>
@@ -419,6 +450,7 @@ monospace typeface and is used wrapped around `<code>` elements to show the Code
 
 X
 
+### Coded Example 
 <Canvas style={{ margin: "0", }}>
     <div>
         <p>x</p>
@@ -432,6 +464,7 @@ X
 
 X
 
+### Coded Example 
 <Canvas style={{ margin: "0", }}>
     <div>
         <p>x</p>
@@ -445,6 +478,7 @@ X
 
 X
 
+### Coded Example 
 <Canvas style={{ margin: "0", }}>
     <div>
         <p>x</p>
@@ -458,6 +492,7 @@ X
 
 X
 
+### Coded Example 
 <Canvas style={{ margin: "0", }}>
     <div>
         <p>x</p>
@@ -471,6 +506,7 @@ X
 
 X
 
+### Coded Example 
 <Canvas style={{ margin: "0", }}>
     <div>
         <p>x</p>
@@ -484,6 +520,7 @@ X
 
 Thematic Break (Horizontal Rule)
 
+### Coded Example 
 <Canvas style={{ margin: "0", }}>
     <div>
         <p>x</p>
