@@ -45,9 +45,9 @@ a component should be built instead with the BEM naming convention used.
     <li><a href="#BlockCode">Code Block</a></li>
     <li><a href="#Sample">Sample Output</a></li>
     <li><a href="#Variable">Variable</a></li>
-    <li><a href="#key">Keyboard Input</a></li>
     <li><a href="#Sup">Superscript</a></li>
     <li><a href="#Sub">Subscript</a></li>
+    <li><a href="#key">Keyboard Input</a></li>
     <li><a href="#Break">Thematic Break</a></li>
 </ul>
 </nav>
@@ -201,11 +201,12 @@ such as for keywords in a summary or product names in a review.
 
 ## Highlighting
 
-Highlight formatting is used for reference or notation purposes. The `<mark>` element is 
-used to represent text which is marked or highlighted. The presence of the `<mark>` element 
-is not announced by most screen reading technology in its default configuration therefore 
-for accessibility it should be announced using a span with the `<.sr-only>` class at the 
-start and end of the highlighted text as in the example shown below.
+Highlight formatting is used for reference or notation purposes. 
+The `<mark>` element is used to represent text which is marked or highlighted. 
+The presence of the `<mark>` element is not announced by most 
+screen reading technology in its default configuration therefore 
+for accessibility it should be announced using a span with the `<.sr-only>` class 
+at the start and end of the highlighted text as in the example shown below.
 
 ### Coded Example 
 <Canvas style={{ margin: "0", }}>
@@ -221,10 +222,10 @@ start and end of the highlighted text as in the example shown below.
 
 ## Abbreviation
 
-For abbreviations the `<abbr>` HTML element is used to represent an abbreviation or acronym. 
-The `<title>` attribute is then used to provide an expansion or description for the abbreviation 
-and when the user hovers over the text the description is shown. The `<title>` must only contain 
-the description and nothing else.
+For abbreviations the `<abbr>` HTML element is used to represent an abbreviation 
+or acronym. The `<title>` attribute is then used to provide an expansion or 
+description for the abbreviation and when the user hovers over the text the 
+description is shown. The `<title>` must only contain the description and nothing else.
 
 ### Coded Example 
 <Canvas style={{ margin: "0", }}>
@@ -237,13 +238,14 @@ the description and nothing else.
 ## Definitions
 
 When showing definitions they should be styled differently to the other text.
-The `<dfn>` element is used to indicate the term being defined within the context of a definition 
-phrase or sentence and the `<p>` element which is the nearest ancestor of the `<dfn>` is considered 
-to be the definition of the term.
+The `<dfn>` element is used to indicate the term being defined within the 
+context of a definition phrase or sentence and the `<p>` element which is the 
+nearest ancestor of the `<dfn>` is considered to be the definition of the term.
 
 ### Coded Example 
 <Canvas style={{ margin: "0", }}>
-<p>The HTML Definition element `<dfn>&lt;dfn&gt;</dfn>` is used to indicate the term being defined.</p>
+<p>The HTML Definition element `<dfn>&lt;dfn&gt;</dfn>` is used to indicate the 
+term being defined.</p>
 </Canvas>
 
 
@@ -251,11 +253,12 @@ to be the definition of the term.
 
 ## Unarticulated Annotation
 
-Unarticulated annotation is inline text which should be rendered in a way that indicates that 
-it has a non-textual annotation. The `<u>` element is used to represent unarticulated annotation
-which used to be called the "Underline" element in older versions of HTML, and is still sometimes 
-misused in this way. To underline text, you should instead apply a style that includes the 
-CSS text-decoration property set to underline. The `<u>` element should not be used to underline 
+Unarticulated annotation is inline text which should be rendered in a way that 
+indicates that it has a non-textual annotation. The `<u>` element is used to 
+represent unarticulated annotation which used to be called the "Underline" element 
+in older versions of HTML, and is still sometimes misused in this way. To 
+underline text, you should instead apply a style that includes the CSS text-decoration 
+property set to underline. The `<u>` element should not be used to underline 
 text for presentation purposes, or to denote titles of books.
 
 ### Coded Example 
@@ -324,11 +327,13 @@ text for context or have a section heading.
 
 ## Time and Dates
 
-When representing a specific period in time the `<time>` element should be used so that it is styled
-differently to stand out from the rest of the text and also to make the data machine readable. This 
-allows for better search engine results and for possible custom features such as reminders. The `<time>`
-element can be used to render a specific time using the 24-hour clock, a date using the Gregorian calendar 
-(with optional time and timezone information), or a time duration. 
+When representing a specific period in time the `<time>` element should be used so 
+that it is styled differently to stand out from the rest of the text and also 
+to make the data machine readable. This allows for better search engine 
+results and for possible custom features such as reminders. The `<time>` element 
+can be used to render a specific time using the 24-hour clock, a date using 
+the Gregorian calendar (with optional time and timezone information), or 
+a time duration. 
 
 
 ### Coded Example 
@@ -344,13 +349,18 @@ element can be used to render a specific time using the 24-hour clock, a date us
 
 ## Contact Details
 
-The `<address>` element indicates that the enclosed information provides contact information for a person or people,
-or for an organization. It may include any type of contact information that is needed, such as a physical address, URL,
-email address, phone number, social media handle, geographic coordinates, and so forth.
-It used to be the case that an `<address>` element was only supposed to be used to represent the contact information of the
-document's author, however, its definition has since been updated so it can now be used to mark up arbitrary addresses.
-When creating contact sections you are likely to want to create a seperate component for this so to use external links
-and also to possibly add icons or other further styling, but the below example is still the basic typography markup you will need to use.
+The `<address>` element indicates that the enclosed information provides 
+contact information for a person or people, or for an organization. 
+It may include any type of contact information that is needed, such as 
+a physical address, URL, email address, phone number, social media handle, 
+geographic coordinates, and so forth. It used to be the case that 
+an `<address>` element was only supposed to be used to represent the contact 
+information of the document's author, however, its definition has since 
+been updated so it can now be used to mark up arbitrary addresses. When 
+creating contact sections you are likely to want to create a seperate 
+component for this so to use external links and also to possibly add icons 
+or other further styling, but the below example is still the basic typography 
+markup you will need to use.
 
 ### Coded Example 
 <Canvas style={{ margin: "0", }}>
@@ -390,10 +400,11 @@ but the below example is still the same markup you will need.
 
 ## Inline Quotation
 
-For inline quotation within a paragraph the `<q>` element should be used to indicate 
-that the enclosed text is a short inline quotation. Most modern web browsers implement 
-this by surrounding the text in quotation marks and a URL for the source of the quotation 
-may be given using the `<cite>` attribute and as an external link as in the below example.
+For inline quotation within a paragraph the `<q>` element should be 
+used to indicate that the enclosed text is a short inline quotation. 
+Most modern web browsers implement this by surrounding the text in 
+quotation marks and a URL for the source of the quotation may be given 
+using the `<cite>` attribute and as an external link as in the below example.
 
 ### Coded Example 
 <Canvas style={{ margin: "0", }}>
@@ -406,11 +417,12 @@ may be given using the `<cite>` attribute and as an external link as in the belo
 ## Block Quotation
 
 For longer quotations a quotation block component should be used with 
-the `<blockquote>` element which indicates that the enclosed text is an extended quotation.
-Usually, this is rendered visually by indentation and a URL for the source of the quotation
-may be given using the `<cite>` attribute, while a text representation of the source can 
-be given using the `<cite>` element. An external link to the cited source may also be given 
-if the source is a URL as in the below example.
+the `<blockquote>` element which indicates that the enclosed text is 
+an extended quotation. Usually, this is rendered visually by indentation 
+and a URL for the source of the quotation may be given using the `<cite>` 
+attribute, while a text representation of the source can be given using 
+the `<cite>` element. An external link to the cited source may also be 
+given if the source is a URL as in the below example.
 
 ### Coded Example 
 <Canvas style={{ margin: "0", }}>
@@ -427,10 +439,11 @@ if the source is a URL as in the below example.
 
 ## Inline Code
 
-Inline code is written inline with other text and is formatted using the `<code>` element to display its 
-contents styled in a fashion intended to indicate that the text is a short fragment of computer code. 
-This code content is displayed using the design systems monospace typeface with a darker background 
-than other paragraph text.
+Inline code is written inline with other text and is formatted using 
+the `<code>` element to display its contents styled in a fashion intended 
+to indicate that the text is a short fragment of computer code. This code 
+content is displayed using the design systems monospace typeface with a 
+darker background than other paragraph text.
 
 ### Coded Example 
 <Canvas style={{ margin: "0", }}>
@@ -442,9 +455,11 @@ than other paragraph text.
 
 ## Code Block
 
-Preformatted text is used to display code within Code Blocks. The `<pre>` HTML5 element is used to represent the 
-preformatted text which is to be presented exactly as written. The text is rendered using the design systems 
-monospace typeface and is used wrapped around `<code>` elements to show the Code Block.
+Preformatted text is used to display code within Code Blocks. 
+The `<pre>` HTML5 element is used to represent the preformatted text which 
+is to be presented exactly as written. The text is rendered using the design 
+systems monospace typeface and is used wrapped around `<code>` elements to 
+show the Code Block.
 
 <!-- Note: 
 `<pre>` element does not work within ### Coded Example 
@@ -464,6 +479,8 @@ monospace typeface and is used wrapped around `<code>` elements to show the Code
 
 For sample output text, such as the output from a computer program or to represent 
 the comandline the `<samp>` element is used to enclose the inline text.
+Note that to add syntax colors a `<span>` maybe used with inline syling applied to 
+change the text color as required.
 
 ### Coded Example 
 <Canvas style={{ margin: "0", }}>
@@ -478,27 +495,13 @@ $ █
 
 ## Variable
 
-X
+To represents the name of a variable in a mathematical expression or a programming 
+context the `<var>` element should be used, presenting the variable name using 
+italic and bold styling.
 
 ### Coded Example 
 <Canvas style={{ margin: "0", }}>
-    <div>
-        <p>x</p>
-    </div>
-</Canvas>
-
-
-<div id="key" style={{ marginTop: "80px", }}></div>
-
-## Keyboard Input
-
-X
-
-### Coded Example 
-<Canvas style={{ margin: "0", }}>
-    <div>
-        <p>x</p>
-    </div>
+<p>A simple equation: <var>x</var> = <var>y</var> + 2 </p>
 </Canvas>
 
 
@@ -519,6 +522,20 @@ X
 <div id="Sub" style={{ marginTop: "80px", }}></div>
 
 ## Subscript
+
+X
+
+### Coded Example 
+<Canvas style={{ margin: "0", }}>
+    <div>
+        <p>x</p>
+    </div>
+</Canvas>
+
+
+<div id="key" style={{ marginTop: "80px", }}></div>
+
+## Keyboard Input
 
 X
 

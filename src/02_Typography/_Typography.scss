@@ -360,14 +360,18 @@ samp {
 
 // Variable
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/var
-// The <var> element represents the name of a variable in a mathematical expression or a programming context.
-// It's typically presented using an italicized version of the current typeface, although that behavior is browser-dependent.
 var {
     font-size: font-size(cm);
     font-weight: font-weight(bold);
     font-style: italic;
     color: brand-color(midnight);
 }
+
+// Superscript
+//
+
+// Subscript
+// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sub
 
 // Keyboard Input
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd
@@ -389,12 +393,6 @@ kbd {
     padding: spacing(xxxs) spacing(xxs);
     white-space: nowrap;
 }
-
-// Superscript
-//
-
-// Subscript
-// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sub
 
 // Thematic Break (Horizontal Rule)
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr
