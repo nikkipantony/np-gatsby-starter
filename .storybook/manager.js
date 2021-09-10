@@ -23,6 +23,7 @@ addons.setConfig({
         collapsedRoots: [
             "foundations",
             "design-tokens",
+            "typography",
             "atoms",
             "molecules",
             "organisms",
