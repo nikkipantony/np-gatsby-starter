@@ -6,15 +6,20 @@
 // Import Fonts From Google Fonts
 @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Mono:wght@400;700&family=Rubik:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
-// To host a font locally create a new folder within this `10_Styles` folder to save the font files within.
-// Then, add your @font-face rules to this file or use the gatsby plugin listed below or typography.js to manage your fonts.
-// For more info see links below:
+// To host a font locally create a new folder within the `10_Styles`
+// folder to save the font files within.
+// Then, add your @font-face rules to this file or use the gatsby
+// plugin listed below or typography.js to manage your fonts.
 // https://www.gatsbyjs.com/docs/recipes/styling-css#adding-a-local-font
 // https://www.gatsbyjs.com/docs/typography-js
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-your-fonts
 // https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display
 // https://css-tricks.com/snippets/css/using-font-face
 // https://google-webfonts-helper.herokuapp.com/fonts
+
+// All Typography elements styled within this stylesheet are
+// accompanied by a link to the appropriate MDN Docs for
+// further information and guidance if needed.
 
 // Headings
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements
@@ -107,8 +112,6 @@ small {
 
 // Emphasis
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em
-// The <em> element is for words that have a stressed emphasis compared to surrounding text,
-// which is often limited to a word or words of a sentence and affects the meaning of the sentence itself.
 em {
     font-size: font-size(cm);
     font-weight: font-weight(bold);
@@ -141,7 +144,7 @@ b {
 // Highlighting
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark
 // https://developer.paciellogroup.com/blog/2017/12/short-note-on-making-your-mark-more-accessible
-// Accessibility Concerns
+// Note: Accessibility Concerns
 // The presence of the mark element is not announced by most screen reading technology in its default configuration.
 // It can be made to be announced using a span with the .sr-only class at the start and end of the highlighted text.
 // ie: <mark><span className="sr-only"> [highlight starts] </span> Highlighed Text <span className="sr-only"> [highlight ends] </span><mark>
@@ -170,10 +173,6 @@ dfn {
 
 // Unarticulated Annotation
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/u
-// The <u> element represents inline text which should be rendered in a way that indicates that it has a non-textual
-// annotation. This is rendered by default as a simple solid underline, but may be altered using CSS.
-// This element used to be called the "Underline" element in older versions of HTML, and is still sometimes misused
-// in this way. To underline text, you should instead apply a style that includes the CSS text-decoration property set to underline.
 u {
     font-style: italic;
     text-decoration: none;
@@ -330,8 +329,7 @@ code {
 
 // Code Blocks (Preformatted Text)
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/pre
-// Note:
-// `pre` element does not work within <Canvas> so the example code wraps
+// Note: The `pre` element does not work within <Canvas> so the example code wraps instead of being pre-formatted as desired.
 pre {
     display: block;
     color: brand-color(snow);
@@ -395,11 +393,6 @@ kbd {
 
 // Thematic Break (Horizontal Rule)
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr
-// The <hr> element represents a thematic break between paragraph-level elements: for example, a change of scene in a story,
-// or a shift of topic within a section.
-// Historically, this has been presented as a horizontal rule or line. While it may still be displayed as a horizontal rule
-// in visual browsers, this element is now defined in semantic terms, rather than presentational terms, so if you wish to draw
-// a horizontal line, you should do so using appropriate CSS.
 hr {
     border: none;
     border-top: border(default);

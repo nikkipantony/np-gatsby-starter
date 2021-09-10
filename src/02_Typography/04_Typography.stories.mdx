@@ -4,14 +4,15 @@ import { Meta, Canvas } from '@storybook/addon-docs';
 
 # Typography Guidelines
 
-This section visually presents type formatting decisions using this 
-design systems typography design tokens. This guide shows the correct
-use of HTML5 semantic markup to be used as well as styling for consistency 
-to create a higher level of accessibility for products built with this system.
-It should also be noted that no class's (className's) are applied to 
-elements to render this styling, the styling should be applied directly to
-the elements to maintain consistency. In circumstances when a class is needed, 
-a component should be built instead with the BEM naming convention used.
+These Typography Guidelines visually presents type formatting decisions 
+using this design systems typography design tokens. This guide shows 
+examples of the correct use of HTML5 semantic markup to be used as well 
+as styling for consistency to create a higher level of accessibility for 
+products built with this system. It should also be noted that no class's 
+(className's) are applied to elements to render this styling, the styling 
+is applied directly to the elements to maintain consistency. In 
+circumstances when a class is needed, a component should be built instead 
+using the BEM naming convention.
 
 <div style={{ width: "100%", boxShadow: "rgb(0 0 0 / 10%) 0 4px 6px 0", border: "2px solid rgba(0, 0, 13, 1)", borderRadius: "4px", padding: "30px", marginTop: "20px", }}>
 
@@ -58,16 +59,16 @@ a component should be built instead with the BEM naming convention used.
 
 ## Headings
 
-Headings are typography components used to create various 
-levels of hierarchies between text. The `<h1>` to `<h6>` elements 
-represent the six levels of section and/or page headings with 
-`<h1>` being at the highest hierarchical level and `<h6>` being at 
-the lowest. You should only use one `<h1>` per page. However, 
-using more than one will not result in an error, but using only 
-one is seen as best practice. Having a single top-level title is 
-also arguably better for screenreader users, and for SEO.
+Headings are Typography components used to create hierarchies 
+within text. The `<h1>` to `<h6>` elements are used to represent 
+the six levels of section and/or page headings with `<h1>` being at 
+the highest hierarchical level and `<h6>` being the lowest. You 
+should only use one `<h1>` per page. However, using more than one 
+will not result in an error, but using only one is seen as best 
+practice. Having a single top-level title is also arguably better 
+for screenreader users, and for SEO.
 
-### Coded Example 
+### Coded Example
 <Canvas className="ally-headings" style={{ margin: "0", }}>
 <h1>H1 Heading</h1>
 <h2>H2 Heading</h2>
@@ -82,9 +83,10 @@ also arguably better for screenreader users, and for SEO.
 
 ## Paragraphs
 
-Paragraphs are represented in visual media as blocks of text structured to
-group related content and separate them from adjacent blocks
-by blank lines. The `<p>` element is used to create paragraph components.
+Paragraphs are represented in visual media as blocks of text 
+structured to group related text content and separate them from 
+adjacent blocks using white space (blank lines). The `<p>` element 
+is used to create paragraph components.
 
 ### Coded Example 
 <Canvas style={{ margin: "0", }}>
@@ -98,10 +100,11 @@ by blank lines. The `<p>` element is used to create paragraph components.
 
 Links allow users to navigate to a different location. They can 
 be presented inline inside a paragraph or as standalone text.
-The `<a>` element with its `<href>` attribute, create hyperlink components
-know as an Anchor link which can lead to web pages, files, email addresses,
-locations, phone numbers and sms etc in the same page, or anywhere else a URL can
-address. Content within each `<a>` should indicate the link's
+The `<a>` element along with its `<href>` attribute, are used 
+to create hyperlink components know as an Anchor link which can 
+lead to web pages, files, email addresses, locations, phone numbers 
+and sms etc in the same page, or anywhere else a URL can address. 
+Content within each `<a>` should indicate the link's
 destination. Underline should only be used for text links
 and should never be used as a mechanism for adding emphasis.
 While using this design system you should use the `<ExLink>`
