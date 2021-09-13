@@ -1,14 +1,31 @@
 /*
- * Main Layout Template Storybook Component Stories
+ * Main Layout Template Story
  *
  */
 
 import React from "react"
-import Layout from "./MainLayout"
+import Component from "./MainLayout"
 
 export default {
     title: "Templates/Main Layout",
-    component: Layout,
+    component: Component,
+    parameters: {
+        docs: {
+            description: {
+                component: "Main layout template.",
+            },
+            source: {
+                code: "<MainLayout> </MainLayout>",
+            },
+        },
+        argTypes: {
+            table: {
+                table: {
+                    show: "false",
+                },
+            },
+        },
+    },
 }
 
-export const Working = () => <Layout />
+export const MainLayout = args => <Component {...args} />

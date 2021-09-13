@@ -5,7 +5,7 @@
 
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../MainLayout/MainLayout"
+import MainLayout from "../MainLayout/MainLayout"
 import Seo from "../../09_Utilities/SEO"
 
 export default function Template({
@@ -15,7 +15,7 @@ export default function Template({
     const { frontmatter, html } = markdownRemark
 
     return (
-        <Layout>
+        <MainLayout>
             <Seo title={frontmatter.title} />
             <section className="page-template">
                 <div
@@ -34,7 +34,7 @@ export default function Template({
                     </div>
                 </div>
             </section>
-        </Layout>
+        </MainLayout>
     )
 }
 
