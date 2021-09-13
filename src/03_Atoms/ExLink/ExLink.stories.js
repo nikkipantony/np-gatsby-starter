@@ -19,31 +19,22 @@ export default {
     argTypes: {
         to: {
             description: "Link to destination",
+            defaultValue: "/",
         },
         text: {
             description: "Link text",
+            defaultValue: "ExLink",
         },
         modifier: {
             description: "Modifier options",
+            control: {
+                type: "select",
+                labels: {
+                    "": "no modifier",
+                },
+            },
         },
-        // Custom Line: {
-        //     description: "Overwritten description",
-        //     table: {
-        //         type: {
-        //             summary: "Something short",
-        //             detail: "Something really really long",
-        //         },
-        //     },
-        //     control: {
-        //         type: null,
-        //     },
-        // },
     },
 }
 
 export const ExternalLink = args => <Component {...args} />
-ExternalLink.args = {
-    to: "/",
-    text: "ExLink",
-    modifier: "",
-}

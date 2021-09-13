@@ -39,4 +39,13 @@ button,
             background: tint(action-color(error), t60);
         }
     }
+
+    &--add {
+        background: tint(action-color(success), t40);
+
+        &:hover,
+        &:focus {
+            background: tint(action-color(success), t60);
+        }
+    }
 }

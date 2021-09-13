@@ -13,30 +13,39 @@ import IconsSprite from "./IconSprite.svg"
 
 const Icon = props => {
     return (
-        <>
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
-                viewBox="0 0 24 24"
-                focusable="false"
-                className={`icon ${props.fill} ${props.modifier}`}
-            >
-                <title>{props.title}</title>
-                <use xlinkHref={`${IconsSprite}#${props.name}`} />
-            </svg>
-        </>
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 24 24"
+            focusable="false"
+            className={`icon icon${props.modifier} ${props.fill}`}
+        >
+            <title>{props.title}</title>
+            <use xlinkHref={`${IconsSprite}#${props.name}`} />
+        </svg>
     )
 }
 
 Icon.defaultProps = {
-    name: "open-in-new",
-    title: "Link will open in a new tab",
-    fill: "midnight",
+    name: "",
+    title: "",
+    fill: "",
     modifier: "",
 }
 
 Icon.propTypes = {
-    name: PropTypes.string.isRequired,
+    name: PropTypes.oneOf([
+        "a11y",
+        "burger-menu",
+        "close",
+        "cookie",
+        "home",
+        "mail",
+        "map-marker",
+        "message",
+        "open-in-new",
+        "privacy-lock",
+    ]),
     title: PropTypes.string.isRequired,
     fill: PropTypes.oneOf(["midnight", "snow"]),
     modifier: PropTypes.oneOf(["", "--small"]),

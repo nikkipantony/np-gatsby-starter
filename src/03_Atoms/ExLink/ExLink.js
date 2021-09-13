@@ -31,7 +31,7 @@ const ExLink = props => {
 }
 
 ExLink.defaultProps = {
-    to: "/",
+    to: "",
     text: "",
     modifier: "",
 }

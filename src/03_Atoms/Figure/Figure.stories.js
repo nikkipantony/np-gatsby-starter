@@ -21,35 +21,27 @@ export default {
     argTypes: {
         filename: {
             description: "Image filename",
+            defaultValue: "Gatsby.png",
         },
         alt: {
             description: "Image alternative text",
+            defaultValue: "Gatsby Logo",
         },
         figcaption: {
             description: "Image caption text",
+            defaultValue: "The Gatsby Logo",
         },
         modifier: {
             description: "Modifier options",
+            defaultValue: "--maxWidth500",
+            control: {
+                type: "select",
+                labels: {
+                    "": "no modifier",
+                },
+            },
         },
-        // Custom Line: {
-        //     description: "Overwritten description",
-        //     table: {
-        //         type: {
-        //             summary: "Something short",
-        //             detail: "Something really really long",
-        //         },
-        //     },
-        //     control: {
-        //         type: null,
-        //     },
-        // },
     },
 }
 
 export const Figure = args => <Component {...args} />
-Figure.args = {
-    filename: "Gatsby.png",
-    alt: "Gatsby Logo",
-    figcaption: "The Gatsby Logo",
-    modifier: "--maxWidth500",
-}

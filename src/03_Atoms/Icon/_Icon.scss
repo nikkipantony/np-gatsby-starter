@@ -1,18 +1,19 @@
 /*
- * Icon Styles
+ * Icon Component Styles
  *
  */
 
+svg.icon,
 .icon {
     width: icon-size(regular);
     height: icon-size(regular);
 
-    &.--small {
+    &--small {
         width: icon-size(small);
         height: icon-size(small);
     }
 
-    &.--large {
+    &--large {
         width: icon-size(large);
         height: icon-size(large);
     }
@@ -23,5 +24,6 @@
 
     &.snow {
         fill: brand-color(snow);
+        background: brand-color(midnight);
     }
 }

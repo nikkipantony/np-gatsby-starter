@@ -19,27 +19,18 @@ export default {
     argTypes: {
         text: {
             description: "Button text",
+            defaultValue: "Button",
         },
         modifier: {
             description: "Modifier options",
+            control: {
+                type: "select",
+                labels: {
+                    "": "no modifier",
+                },
+            },
         },
-        // Custom Line: {
-        //     description: "Overwritten description",
-        //     table: {
-        //         type: {
-        //             summary: "Something short",
-        //             detail: "Something really really long",
-        //         },
-        //     },
-        //     control: {
-        //         type: null,
-        //     },
-        // },
     },
 }
 
 export const Button = args => <Component {...args} />
-Button.args = {
-    text: "Ally Button",
-    modifier: "",
-}
