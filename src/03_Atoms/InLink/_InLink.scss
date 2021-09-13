@@ -3,7 +3,9 @@
  *
  */
 
-.in-link {
+.in-link,
+.in-link:link,
+.in-link:visited {
     font-family: typeface(rubik);
     font-weight: font-weight(bold);
     color: brand-color(midnight);

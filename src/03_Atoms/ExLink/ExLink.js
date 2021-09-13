@@ -1,5 +1,5 @@
 /*
- * External Link Component
+ * ExLink Component
  *
  * Prop-types: https://www.npmjs.com/package/prop-types
  * Typechecking with Proptypes https://reactjs.org/docs/typechecking-with-proptypes.html
@@ -13,37 +13,33 @@ import Icon from "../Icon/Icon"
 
 const ExLink = props => {
     return (
-        <>
-            <a
-                className={`ex-link ${props.className} ${props.modifier}`}
-                href={props.to}
-                rel="noopener noreferrer"
-                target="_blank"
-            >
-                {props.text}{" "}
-                <Icon
-                    name="open-in-new"
-                    title="Link will open in a new
+        <a
+            className={`ex-link ex-link${props.modifier}`}
+            href={props.to}
+            rel="noopener noreferrer"
+            target="_blank"
+        >
+            {props.text}{" "}
+            <Icon
+                name="open-in-new"
+                title="Link will open in a new
                     tab"
-                    fill="midnight"
-                />
-            </a>
-        </>
+                fill="midnight"
+            />
+        </a>
     )
 }
 
 ExLink.defaultProps = {
     to: "/",
-    text: "Link Text Missing",
-    className: "",
+    text: "",
     modifier: "",
 }
 
 ExLink.propTypes = {
     to: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
-    className: PropTypes.string,
-    modifier: PropTypes.string,
+    modifier: PropTypes.oneOf(["", "--small"]),
 }
 
 export default ExLink
