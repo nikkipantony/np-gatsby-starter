@@ -3,6 +3,7 @@
  *
  */
 
+figure.figure,
 .figure {
     width: 100%;
 
@@ -12,7 +13,7 @@
         width: 100%;
     }
 
-    &.--maxWidth500 {
+    &--maxWidth500 {
         max-width: 500px;
     }
 }

@@ -40,9 +40,7 @@ const Image = props => (
             }
 
             return (
-                <figure
-                    className={`figure ${props.className} ${props.modifier}`}
-                >
+                <figure className={`figure figure${props.modifier}`}>
                     <Img
                         className={`figure__image`}
                         alt={props.alt}
@@ -56,19 +54,17 @@ const Image = props => (
 )
 
 Image.defaultProps = {
-    caption: "The Gatsby Logo",
-    filename: "Gatsby.png",
-    alt: "Gatsby Logo",
-    className: "",
-    modifier: "--maxWidth500",
+    filename: "",
+    alt: "",
+    figcaption: "",
+    modifier: "",
 }
 
 Image.propTypes = {
-    figcaption: PropTypes.string,
     filename: PropTypes.string.isRequired,
     alt: PropTypes.string.isRequired,
-    className: PropTypes.string,
-    modifier: PropTypes.string,
+    figcaption: PropTypes.string,
+    modifier: PropTypes.oneOf(["", "--maxWidth500"]),
 }
 
 export default Image
