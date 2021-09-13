@@ -1,5 +1,5 @@
 /*
- * Desktop Menu Component
+ * Menu (Desktop) Component
  *
  * Gatsby Link API: https://www.gatsbyjs.org/docs/gatsby-link
  * Gatsby Active Link: https://www.gatsbyjs.org/docs/gatsby-link/#add-custom-styles-for-the-currently-active-link
@@ -11,36 +11,32 @@ import NavLink from "../../03_Atoms/NavLink/NavLink"
 
 const MenuDesktop = props => {
     return (
-        <>
-            <ul className={`menu-desktop ${props.className} ${props.modifier}`}>
-                <li className="menu-desktop__item">
-                    <NavLink to="/" text="Home" />
-                </li>
-                <li className="menu-desktop__item">
-                    <NavLink to="/gatsby/" text="Gatsby" />
-                </li>
-                <li className="menu-desktop__item">
-                    <NavLink to="/sass-bem/" text="SASS + BEM" />
-                </li>
-                <li className="menu-desktop__item">
-                    <NavLink to="/markdown/" text="Markdown" />
-                </li>
-                <li className="menu-desktop__item">
-                    <NavLink to="/style-guide/" text="Style Guide" />
-                </li>
-            </ul>
-        </>
+        <ul className={`menu-desktop menu-desktop${props.modifier}`}>
+            <li className="menu-desktop__item">
+                <NavLink to="/" text="Home" />
+            </li>
+            <li className="menu-desktop__item">
+                <NavLink to="/gatsby/" text="Gatsby" />
+            </li>
+            <li className="menu-desktop__item">
+                <NavLink to="/sass-bem/" text="SASS + BEM" />
+            </li>
+            <li className="menu-desktop__item">
+                <NavLink to="/markdown/" text="Markdown" />
+            </li>
+            <li className="menu-desktop__item">
+                <NavLink to="/style-guide/" text="Style Guide" />
+            </li>
+        </ul>
     )
 }
 
 MenuDesktop.defaultProps = {
-    className: "",
     modifier: "",
 }
 
 MenuDesktop.propTypes = {
-    className: PropTypes.string,
-    modifier: PropTypes.string,
+    modifier: PropTypes.oneOf([""]),
 }
 
 export default MenuDesktop

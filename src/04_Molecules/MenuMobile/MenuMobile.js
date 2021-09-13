@@ -1,5 +1,5 @@
 /*
- * Mobile Menu Component
+ * Menu (Mobile) Component
  *
  * Reach UI 'menu-button' component: https://reacttraining.com/reach-ui/menu-button
  */
@@ -19,7 +19,7 @@ const NavLink = props => <MenuLink getProps={isActive} {...props} />
 
 const MenuMobile = props => {
     return (
-        <Menu className={`menu-mobile ${props.className} ${props.modifier}`}>
+        <Menu className={`menu-mobile menu-mobile${props.modifier}`}>
             {({ isExpanded }) => (
                 <>
                     <MenuButton>
@@ -58,13 +58,11 @@ const MenuMobile = props => {
 }
 
 MenuMobile.defaultProps = {
-    className: "",
     modifier: "",
 }
 
 MenuMobile.propTypes = {
-    className: PropTypes.string,
-    modifier: PropTypes.string,
+    modifier: PropTypes.oneOf([""]),
 }
 
 export default MenuMobile

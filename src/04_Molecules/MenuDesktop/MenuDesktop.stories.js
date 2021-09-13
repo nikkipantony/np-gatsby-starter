@@ -1,14 +1,32 @@
 /*
- * Desktop Menu Component Stories
+ * Menu (Desktop) Component Story
  *
  */
 
 import React from "react"
-import MenuDesktop from "./MenuDesktop"
+import Component from "./MenuDesktop"
 
 export default {
     title: "Molecules/Menu Desktop",
-    component: MenuDesktop,
+    component: Component,
+    parameters: {
+        docs: {
+            description: {
+                component: "Menu Desktop component.",
+            },
+        },
+    },
+    argTypes: {
+        modifier: {
+            description: "Modifier options",
+            control: {
+                type: "select",
+                labels: {
+                    "": "no modifier",
+                },
+            },
+        },
+    },
 }
 
-export const Working = () => <MenuDesktop />
+export const MenuDesktop = args => <Component {...args} />

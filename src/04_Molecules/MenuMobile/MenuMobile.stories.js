@@ -1,14 +1,32 @@
 /*
- * Mobile Menu Component Stories
+ * Menu (Mobile) Component Stories
  *
  */
 
 import React from "react"
-import MenuMobile from "./MenuMobile"
+import Component from "./MenuMobile"
 
 export default {
     title: "Molecules/Menu Mobile",
-    component: MenuMobile,
+    component: Component,
+    parameters: {
+        docs: {
+            description: {
+                component: "Menu Mobile component.",
+            },
+        },
+    },
+    argTypes: {
+        modifier: {
+            description: "Modifier options",
+            control: {
+                type: "select",
+                labels: {
+                    "": "no modifier",
+                },
+            },
+        },
+    },
 }
 
-export const Working = () => <MenuMobile />
+export const MenuMobile = args => <Component {...args} />
