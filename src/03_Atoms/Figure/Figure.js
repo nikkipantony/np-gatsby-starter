@@ -12,7 +12,7 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const Image = props => (
+const Figure = props => (
     <StaticQuery
         query={graphql`
             query {
@@ -53,18 +53,18 @@ const Image = props => (
     />
 )
 
-Image.defaultProps = {
+Figure.defaultProps = {
     filename: "",
     alt: "",
     figcaption: "",
     modifier: "",
 }
 
-Image.propTypes = {
+Figure.propTypes = {
     filename: PropTypes.string.isRequired,
     alt: PropTypes.string.isRequired,
     figcaption: PropTypes.string,
     modifier: PropTypes.oneOf(["", "--maxWidth500"]),
 }
 
-export default Image
+export default Figure
