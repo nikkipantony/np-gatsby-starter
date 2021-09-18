@@ -23,7 +23,7 @@ module.exports = {
         //     options: { configureJSX: false },
         // },
         "@storybook/addon-docs",
-        // "@storybook/addon-a11y",
+        "@storybook/addon-a11y",
         "@storybook/addon-actions",
         "@storybook/addon-controls",
         // "@storybook/addon-links",
@@ -32,7 +32,6 @@ module.exports = {
     ],
 
     // WebPack Custom Config for use with Gatsby V3
-
     core: {
         builder: "webpack5",
     },
