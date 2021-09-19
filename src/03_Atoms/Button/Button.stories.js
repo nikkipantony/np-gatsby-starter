@@ -5,12 +5,10 @@
 
 import React from "react"
 import Component from "./Button"
-import { jsxDecorator } from "storybook-addon-jsx"
 
 export default {
     title: "Atoms/Button",
     component: Component,
-    decorators: [jsxDecorator],
     parameters: {
         docs: {
             description: {

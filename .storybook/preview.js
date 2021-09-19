@@ -18,6 +18,13 @@ import { action } from "@storybook/addon-actions"
 // Import addParameters from React Storybook
 import { addParameters } from "@storybook/react"
 
+// Configure The JSX Addon To Be Added Globally
+const { addDecorator } = require("@storybook/react")
+const { jsxDecorator } = require("storybook-addon-jsx")
+
+// Add JSX Decorator Globally
+addDecorator(jsxDecorator)
+
 // Import DocsPage and DocsContainer from Doc Blocks
 import { DocsPage, DocsContainer } from "@storybook/addon-docs"
 
