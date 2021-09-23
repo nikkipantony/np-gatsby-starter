@@ -27,6 +27,7 @@ module.exports = {
         "@storybook/addon-controls",
         "@storybook/addon-docs",
         "storybook-addon-jsx",
+        "@storybook/addon-measure",
         // "@storybook/addon-links",
         // "@storybook/addon-viewport",
         // "storybook-addon-designs",
