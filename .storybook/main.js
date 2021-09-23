@@ -16,21 +16,14 @@ module.exports = {
 
     // Register installed storybook addons
     addons: [
-        // Register Docs addon with `/register` to register without presets
-        // "@storybook/addon-docs/register",
-        // {
-        //     name: "@storybook/addon-docs",
-        //     options: { configureJSX: false },
-        // },
         "@storybook/addon-a11y",
         "@storybook/addon-actions",
         "@storybook/addon-controls",
+        // "storybook-addon-designs",
         "@storybook/addon-docs",
         "storybook-addon-jsx",
         "@storybook/addon-measure",
         "@storybook/addon-viewport",
-        // "@storybook/addon-links",
-        // "storybook-addon-designs",
     ],
 
     // WebPack Custom Config for use with Gatsby V3
